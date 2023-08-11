@@ -1,0 +1,56 @@
+@import '_colors';
+@import '_fonts';
+@import '_mixins';
+
+.container {
+    @include containerStyle;
+    flex-direction: row-reverse;
+    align-items: center;
+    background: #fff;
+
+
+    .content{
+        width: 50%;
+        h1{
+            span{
+                color: $secondColor;
+            }
+        }
+        p{
+            text-align: justify;
+            width: 80%;
+            margin-top: 10px;
+            line-height: 1.5rem;
+            // padding: 20px;
+            @include fontstyle(1rem, 400,$darkColor);
+        }
+    }
+    .image{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@include media (M){
+    .container{
+        flex-direction: column;
+        .image{
+            width: 100%;
+            height: 40vh;
+            img{
+                height: 100%;
+            }
+        }
+        .content{
+            width: 100%;
+            margin-top: 50px;
+            p{
+            width: 100%;
+            // @include fontstyle(.6rem, 450,$darkColor);
+            // line-height: 1rem;
+
+            }
+        }
+    }
+}

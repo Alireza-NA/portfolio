@@ -1,0 +1,9 @@
+@import '_colors';
+@import '_fonts';
+@import '_mixins';
+
+.container {
+    @include containerStyle;
+    align-items: center;
+    background: #fff;
+}

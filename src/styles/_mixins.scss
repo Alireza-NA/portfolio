@@ -1,0 +1,55 @@
+
+@mixin fontstyle ($size , $weight , $color) {
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+}
+@mixin transition {
+    transition: all .15s ease-in;
+}
+@mixin containerStyle {
+    display: flex;
+    min-height: 100vh;
+    width: calc(100vw - 6rem);
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 1rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+@mixin titleStyle{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+@mixin iconhover {
+    &:hover{
+        cursor: pointer;
+        transition: all 1s ease ;
+        transform:translateY(-20px);
+    }
+}
+@mixin boxShadow{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+@mixin iconStyle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    span{
+        margin-top: 20px;
+    }
+}
+@mixin media ($size) {
+    @if( $size == M){
+        @media (max-width:768px){
+            @content;
+        }
+    }@else if($size == L){
+        @media (min-width : 768px) and (max-width: 1200px){
+        @content;
+        }
+    }
+}

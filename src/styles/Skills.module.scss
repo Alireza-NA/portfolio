@@ -1,0 +1,31 @@
+@import '_colors';
+@import '_fonts';
+@import '_mixins';
+
+.container {
+    @include containerStyle;
+    align-items: center;
+    flex-direction: column;
+    background: #fff;
+
+    h1{
+        @include titleStyle;
+        margin-top: 3rem;
+    }
+
+    .icons{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            height: 100%;
+            .icon{
+                @include iconStyle;
+                .iconhover{
+                    @include iconhover;
+                }
+            }
+    }
+    span{
+        @include fontstyle(1rem , 500 , $darkColor)
+    }
+}

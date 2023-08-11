@@ -1,0 +1,20 @@
+@import '_colors';
+@import '_fonts';
+@import '_mixins';
+
+.container{
+    @include containerStyle;
+    align-items: center;
+    flex-direction: column;
+    background: #fff;
+
+    h1{
+        @include titleStyle;
+        margin-top: 3rem;
+    }
+    .aboutMeText{
+        margin-top:20px ;
+        width: 60vw;
+        text-align: justify;
+    }
+}
